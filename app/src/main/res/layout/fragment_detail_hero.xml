@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/img_detail_hero"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/batman" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginRight="15dp"
+        android:text="Batman"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:background="#61686868"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="#37686868"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/PowerStats"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="PowerStats"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <include
+                android:id="@+id/powerStats_include"
+                layout="@layout/item_powerstat"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/PowerStats" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Biography"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="Biography"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                app:layout_constraintTop_toBottomOf="@id/powerStats_include"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <include
+                android:id="@+id/biography_include"
+                layout="@layout/item_biography"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Biography" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/appearance"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:text="appearance"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/biography_include"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <include
+                android:id="@+id/appearance_include"
+                layout="@layout/item_appearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appearance" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/work"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:text="work"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/appearance_include"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/work_occupation"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/work"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/work_base"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:text="21st Century Gotham City"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/work_occupation"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/connections"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:text="connections"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/work_base"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <include
+                android:id="@+id/connections_include"
+                layout="@layout/item_connections"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/connections" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
